@@ -11,11 +11,7 @@ df = pd.read_excel('Data.xlsx')
 
 df1=df.head(1000)
 
-# Load Titanic dataset
-#titanic_df = sns.load_dataset('titanic')
 
-# Drop rows with missing values
-#titanic_df.dropna(subset=['age', 'fare'], inplace=True)
 
 # Select features for clustering
 X = df1[['Netto Peb', 'Nilai Dev Usd Brg']]
