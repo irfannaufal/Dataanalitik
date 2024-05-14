@@ -5,16 +5,12 @@ import matplotlib.pyplot as plt
 from sklearn.preprocessing import StandardScaler
 
 df = pd.read_excel('Data.xlsx')
-#df
-
-#df.info()
-
-df1=df.head(1000)
-
-
-
-# Select features for clustering
-X = df1[['Netto Peb', 'Nilai Dev Usd Brg']]
+df1 = df[(df['Asuransi Fob'] != 0) | (df['Freight Fob'] != 0)]
+#df1
+dft=df1.head(1000)
+df2 = df[(df['Netto Peb'] != 0)]
+df2
+X = dft[['Freight Fob', 'Nilai Dev Usd Brg']]
 
 # Standardize features
 scaler = StandardScaler()
